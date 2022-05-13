@@ -1,5 +1,6 @@
 # Programa para testar habilidades em python
 import os
+os.system('cls')
 print("Bem vindo ao Rei do Lanche! ")
 nomeCliente = input("Qual o seu nome?\n>>")
 lancheP = 12.50
@@ -44,8 +45,7 @@ def main():
 
     notinha = input("Deseja gerar uma Nf-E Sim[s] ou Não[n]?\n>>")
      #limpa tela
-    print("\n" * os.get_terminal_size().lines)
-
+    os.system('cls')
     if notinha == 's':
         with open('Cupomfiscal.txt', 'w') as cupom:
             valorPagamento = str(valorPagamento)
@@ -71,9 +71,9 @@ def main():
             cupom.write(str(' Troco:' + '.'*23 + 'R$' + f'{troco}' + '\n'))
             cupom.write(str('='*39 + '\n'))
             cupom.close()
-            #limpa tela
             cupom_imprimir = str(input('Deseja imprimir sua nota fiscal Sim[s] ou Não[n]?\n>>'))
-            print("\n" * os.get_terminal_size().lines)
+            #limpa tela
+            os.system('cls')
             #imprime na tela tudo que esta no aquivo nf-e
             if cupom_imprimir == 's' or cupom_imprimir == 'S':
                 with open("Cupomfiscal.txt","r", encoding="utf-8") as cupom: texto = cupom.read()
