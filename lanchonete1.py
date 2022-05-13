@@ -78,7 +78,6 @@ def main():
             if cupom_imprimir == 's' or cupom_imprimir == 'S':
                 with open("Cupomfiscal.txt","r", encoding="utf-8") as cupom: texto = cupom.read()
                 print(texto)
-                cupom.close()
             else:
                 print("Tenha uma ótima refeição e volte sempre!")
     else:
